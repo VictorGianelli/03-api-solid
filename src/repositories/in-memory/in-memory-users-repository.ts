@@ -22,7 +22,7 @@ export class InMemoryUsersRepository implements UsersRepository {
       password_hash: data.password_hash,
       created_at: new Date(),
     }
-    console.log(user)
+
     this.items.push(user)
 
     return user
