@@ -36,8 +36,7 @@ describe('Register Use Case', () => {
     expect(isPasswordCorrectlyHashed).toBe(true)
   })
 
-  it.skip('should not be able to register with same email twice', async () => {
-    //  TODO: returning: AssertionError: promise resolved "{ user: { id: 'user-1', …(4) } }" instead of rejecting
+  it('should not be able to register with same email twice', async () => {
     const usersRepository = new InMemoryUsersRepository()
     const registerUseCase = new RegisterUseCase(usersRepository)
 
